@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  homepage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "cd skeleton; npm start"
+    volumes: [
+      "./app:/app/skeleton"
+    ]
+    ports: ["80:3000"]
